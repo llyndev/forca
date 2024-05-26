@@ -1,6 +1,8 @@
+# Importando os módulos
 import jogo as j
 import fileHandler as fh
 
+# Menu principal
 def menu():
     print('=' * 30)
     print(' ' * 7 + 'JOGO DA FORCA')
@@ -10,6 +12,7 @@ def menu():
     print('3 - SAIR\n')
     print('=' * 30)
     
+# Criando e localizando o arquivo "score.txt"
 arquivo = 'score.txt'
 if fh.existeArquivo(arquivo):
     print('Arquivo localizado.')
@@ -17,14 +20,15 @@ else:
     print('Arquivo não existe.')
     fh.criarArquivo(arquivo)
     
+# Laço de repetição principal 
 while True:
     menu()
     opcao = int(input('Escolha a opção (1/2/3): '))
     
     
     if opcao == 1:
-            print('Iniciar jogo!')
-            j.jogar()
+        print('Iniciar jogo!')
+        j.jogar()
     elif opcao == 2:
         print('SCORE')
         dados = fh.listarArquivo('score.txt')
@@ -36,7 +40,7 @@ while True:
                 print(f'{i} -> {jogador[0]}, Pontuação: {jogador[1]}')
                 i += 1
     elif opcao == 3:
-            print('Saindo do jogo...')
-            break
+        print('Saindo do jogo...')
+        break
     else:
-            print('Opção inválida. Tente outra opção.')
+        print('Opção inválida. Tente outra opção.')

@@ -1,7 +1,9 @@
-import fileHandler as fh
-from random import choice
+# Importando os módulos
 import desenho as d
+import fileHandler as fh
+from random import choice # Importando choice da biblioteca random para chamar uma palavra aleatoria do arquivo "palavras.txt"
 
+# Função principal da lógica do jogo
 def jogar():
     lista_palavras = list()
     arquivo = fh.abrirArquivoLeitura('palavras.txt')

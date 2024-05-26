@@ -1,3 +1,4 @@
+# Função para imprimir a palavra secreta
 def imprimir_palavra_secreta(palavra, acertos):
     adivinha = ''
     for letra in palavra:
@@ -12,6 +13,7 @@ def imprimir_palavra_secreta(palavra, acertos):
     
     return adivinha
 
+# Função do desenho da forca conforme o erro do usuário
 def desenhar_forca(erros):
     score = 1000
     
