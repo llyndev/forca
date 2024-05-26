@@ -25,22 +25,22 @@ while True:
     menu()
     opcao = int(input('Escolha a opção (1/2/3): '))
     
-    
-    if opcao == 1:
-        print('Iniciar jogo!')
-        j.jogar()
-    elif opcao == 2:
-        print('SCORE')
-        dados = fh.listarArquivo('score.txt')
-        if not dados:
-                print('Score vazio.')
-        else:
-            i = 1
-            for jogador in dados:
-                print(f'{i} -> {jogador[0]}, Pontuação: {jogador[1]}')
-                i += 1
-    elif opcao == 3:
-        print('Saindo do jogo...')
-        break
-    else:
-        print('Opção inválida. Tente outra opção.')
+    match opcao:
+        case 1:
+            print('Iniciar jogo!')
+            j.jogar()
+        case 2:
+            print('SCORE')
+            dados = fh.listarArquivo('score.txt')
+            if not dados:
+                    print('Score vazio.')
+            else:
+                i = 1
+                for jogador in dados:
+                    print(f'{i} -> {jogador[0]}, Pontuação: {jogador[1]}')
+                    i += 1
+        case 3:
+            print('Saindo do jogo...')
+            break
+        case _:
+            print('Opção inválida. Tente outra opção.')
