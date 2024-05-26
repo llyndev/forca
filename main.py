@@ -37,6 +37,7 @@ while True:
             else:
                 i = 1
                 for jogador in dados:
+                    jogador = jogador.split(';')
                     print(f'{i} -> {jogador[0]}, Pontuação: {jogador[1]}')
                     i += 1
         case 3:
